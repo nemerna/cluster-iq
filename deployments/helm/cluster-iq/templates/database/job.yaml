@@ -3,7 +3,7 @@
 kind: Job
 apiVersion: batch/v1
 metadata:
-  name: init-pgsql
+  name: init-pgsql-{{ .Release.Revision }}
   labels:
     {{- include "cluster-iq.labels" . | nindent 4 }}
     {{- include "cluster-iq.componentLabels" "database" | nindent 4 }}
